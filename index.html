@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DEX Bot Trading UI</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+  <script defer src="bot.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>🤖 DEX Bot Trading UI</h1>
+    <button id="connectBtn">🔗 Connect Wallet</button>
+    <div id="walletInfo"></div>
+
+    <h2>Bot Settings</h2>
+    <label>Token In Address:
+      <input type="text" id="tokenIn" placeholder="0x..." />
+    </label>
+    <label>Token Out Address:
+      <input type="text" id="tokenOut" placeholder="0x..." />
+    </label>
+    <label>Amount In (ETH/MATIC/...):
+      <input type="text" id="amountIn" placeholder="0.01" />
+    </label>
+    <label>Slippage (%):
+      <input type="number" id="slippage" value="1" min="0" step="0.1" />
+    </label>
+    <label>Interval (sec):
+      <input type="number" id="interval" value="60" min="5" />
+    </label>
+
+    <button id="startBot">🚀 Start Bot</button>
+    <button id="stopBot">🛑 Stop Bot</button>
+
+    <div id="botStatus">Status: Idle</div>
+  </div>
+</body>
+</html>
